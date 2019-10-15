@@ -24,7 +24,7 @@ hpa:
   targetCPUUtilizationPercentage: 50
 
 spring:
-  profile: prod
+  profile: default
   context_path: /petclinic-prod
 
 service:

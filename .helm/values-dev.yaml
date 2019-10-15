@@ -24,7 +24,7 @@ hpa:
   targetCPUUtilizationPercentage: 50
 
 spring:
-  profile: dev
+  profile: default
   context_path: /petclinic-dev
 
 service:
