@@ -24,10 +24,11 @@ hpa:
   targetCPUUtilizationPercentage: 50
 
 spring:
-  profile: mysql
+  profile: dev
+  context_path: /petclinic-dev
 
 service:
-  type: NodePort
+  type: ClusterIP
 
 db:
   image: mysql:8

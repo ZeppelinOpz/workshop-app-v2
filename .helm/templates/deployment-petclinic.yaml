@@ -35,7 +35,9 @@ spec:
         - name: SPRING_PROFILE
           value: {{ .Values.spring.profile | quote }}
         - name: APP_NAMESPACE
-          value: {{ .Values.env | quote }}                            
+          value: {{ .Values.env | quote }}
+        - name: SERVER_SERVLET_CONTEXT_PATH
+          value: {{ .Values.spring.context_path | quote }}                           
         args: ["java", "-jar", "app.jar","-Dspring.profiles.active=$(SPRING_PROFILE)"]
         ports:
         - containerPort: {{ .Values.petclinic.port }}
