@@ -17,4 +17,7 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: {{ .Values.petclinic.targetPort }}
+      {{- if eq .Values.service.type "NodePort" -}}
+      nodePort: {{ .Values.petclinic.nodePort }}
+      {{- end }}
       name: {{ .Values.petclinic.name }}-port

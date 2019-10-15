@@ -12,7 +12,8 @@ petclinic:
   mem_limits: 512Mi
   cpu_limits: 1000m
   mem_requests: 256Mi
-  cpu_requests: 200m 
+  cpu_requests: 200m
+  nodePort: 31031
 
 health_initialDelaySeconds: 5
 health_timeoutSeconds: 1
@@ -37,4 +38,7 @@ db:
   password: petclinic
   root: supersecret
   port: 3306
-  replicas: 1  
+  replicas: 1
+
+ingress:
+  enabled: false
